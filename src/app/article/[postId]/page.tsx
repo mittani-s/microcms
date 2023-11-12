@@ -3,6 +3,7 @@
 import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getDetail, getList } from "../../../../libs/microcms";
+import Header from "@/app/components/header/header";
 
 export async function generateStaticParams() {
     const { contents } = await getList();
@@ -19,18 +20,17 @@ export async function generateStaticParams() {
 export default async function StaticDetailPage({ params: { postId } }: { params: { postId: string } }) {
     const post = await getDetail(postId);
 
-    // ページの生成された時間を取得
-    const time = new Date().toLocaleString();
-
     if (!post) {
         notFound();
     }
 
     return (
-        <div>
-            <h1>{post.title}</h1>
-            <h2>{time}</h2>
-            <div>{parse(post.content)}</div>
-        </div>
+        <>
+            <Header />
+            <div className="mt-5 mr-1 ml-1">
+                <h1>{post.title}</h1>
+                <div>{parse(post.content)}</div>
+            </div>
+        </>
     );
 }
