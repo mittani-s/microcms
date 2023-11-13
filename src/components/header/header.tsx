@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import HeaderLeft from "./header_left";
 import { HeaderRight } from "./header_right";
+import { BLUE } from "@/constants/const";
 
 const Header = () => {
     return (
@@ -18,7 +19,7 @@ export default Header;
 
 const _header = styled.div`
     width: 100%;
-    border-bottom: solid 3px #0da6e9;
+    border-bottom: solid 3px ${BLUE};
 `;
 
 const _wrapper = styled.div`

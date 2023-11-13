@@ -2,7 +2,7 @@ import { Raleway, Sawarabi_Gothic } from "next/font/google";
 import Head from "next/head";
 import Link from "next/link";
 import styled from "styled-components";
-import { TOP_URL } from "../../../../libs/microcms";
+import { TOP_URL } from "../../../libs/microcms";
 
 const raleway = Raleway({
     weight: "800",

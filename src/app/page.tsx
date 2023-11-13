@@ -1,11 +1,13 @@
-import { ArticleList } from "./components/article-list/article-list";
-import Header from "./components/header/header";
+import { ArticleList } from "../components/article-list/article-list";
+import Header from "../components/header/header";
 
-export default async function StaticPage() {
+const StaticPage = async () => {
     return (
         <div>
             <Header />
             <ArticleList />
         </div>
     );
-}
+};
+
+export default StaticPage;
