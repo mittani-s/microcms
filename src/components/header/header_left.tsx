@@ -1,8 +1,9 @@
+import { TOP_URL } from "@/constants/const";
 import { Raleway, Sawarabi_Gothic } from "next/font/google";
 import Head from "next/head";
 import Link from "next/link";
+import { memo } from "react";
 import styled from "styled-components";
-import { TOP_URL } from "../../../libs/microcms";
 
 const raleway = Raleway({
     weight: "800",
@@ -14,7 +15,10 @@ const sawarabiGothic = Sawarabi_Gothic({
     subsets: ["latin"],
 });
 
-const HeaderLeft = () => {
+const HeaderLeft = memo(function HTML() {
+    const onClickLogo = (url: string) => {
+        location.href = url;
+    };
     return (
         <_headerLeft>
             <Head>
@@ -29,7 +33,7 @@ const HeaderLeft = () => {
             </_caption>
         </_headerLeft>
     );
-};
+});
 
 export default HeaderLeft;
 
@@ -45,6 +49,9 @@ const _logo = styled.h1`
     font-size: 36px;
     text-align: center;
     line-height: 1.5;
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
 `;
 
 const _caption = styled.p`

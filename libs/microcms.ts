@@ -6,7 +6,8 @@ export type Blog = {
     id: string;
     title: string;
     content: string;
-    eyecatch?: MicroCMSImage;
+    // thumbnail: string;
+    thumbnail: MicroCMSImage;
 } & MicroCMSDate;
 
 if (!process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN) {
@@ -45,9 +46,7 @@ export const getDetail = async (contentId: string, queries?: MicroCMSQueries) =>
     });
 
     // データの取得が目視しやすいよう明示的に遅延効果を追加
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
 
     return detailData;
 };
-
-export const TOP_URL = "/";

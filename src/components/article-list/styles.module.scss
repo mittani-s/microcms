@@ -1,0 +1,47 @@
+@use "@/styles/color" as color;
+@use "@/styles/mixin" as mq;
+
+.postLists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+    gap: 2em;
+    margin-top: 3em;
+    &mq.sp {
+        grid-template-columns: 1fr;
+    }
+}
+.postList {
+    margin-bottom: 2em;
+    background-color: #181b23;
+    padding: 5px;
+    border-radius: 5px;
+}
+.imgWrapper {
+    max-width: 100%;
+    height: 150px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    @media (max-width: 768px) {
+        height: calc(53vw - 2rem);
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+.title {
+    font-size: 15.8px;
+    margin-bottom: 0.2em;
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+}
+.date {
+    font-size: 14px;
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
+}

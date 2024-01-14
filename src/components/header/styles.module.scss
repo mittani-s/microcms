@@ -1,0 +1,10 @@
+@use "@/styles/color" as color;
+@use "@/styles/mixin" as mq;
+
+.header {
+    border-bottom: solid 3px color.$BLUE;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 0 calc(50vw - 50%) 1em;
+    width: 100vw;
+}
