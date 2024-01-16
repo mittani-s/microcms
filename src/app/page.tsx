@@ -8,7 +8,7 @@ const StaticPage = async () => {
         return <h1>no contents</h1>;
     }
     return (
-        <div className={"mx-auto w-full px-6 xs:px-7 sm:px-10 max-w-screen-lg flex min-h-screen flex-col"}>
+        <div className={"mx-auto w-full px-5 xs:px-7 sm:px-10 max-w-screen-lg flex min-h-screen flex-col"}>
             <Header />
             <ArticleList props={contents} />
         </div>

@@ -1,0 +1,21 @@
+@use "@/styles/color" as color;
+@use "@/styles/mixin" as mq;
+
+.h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.date {
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: block;
+}
+.content {
+    font-size: 16px;
+    line-height: 2;
+    @include mq.sp {
+        font-size: 14px;
+    }
+    p {
+    }
+}

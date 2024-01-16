@@ -5,6 +5,42 @@
     border-bottom: solid 3px color.$BLUE;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    padding: 0 calc(50vw - 50%) 1em;
+    padding: 0 calc(50vw - 50%);
     width: 100vw;
+}
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 8px 0;
+}
+
+.logo {
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+    line-height: 1.5;
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
+}
+
+.caption {
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-size: 14px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.captionLine {
+    display: inline-block;
 }
