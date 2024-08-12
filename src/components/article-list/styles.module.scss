@@ -2,17 +2,17 @@
 @use "@/styles/mixin" as mq;
 
 .postLists {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
-    gap: 2em;
-    margin-top: 3em;
-    @include mq.sp {
-        grid-template-columns: 1fr;
-    }
+    display: block;
+    width: 740px;
+    max-width: 98%;
 }
 .postList {
     margin-bottom: 1em;
     border-radius: 5px;
+    background-color: #f5f3f1;
+    padding: 24px;
+    display: block;
+    box-sizing: border-box;
 }
 .imgWrapper {
     max-width: 100%;

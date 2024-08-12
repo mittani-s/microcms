@@ -6,6 +6,7 @@ import s from "./styles.module.scss";
 import { load } from "cheerio"; // cheerioの直接参照は非推奨だったため、loadをimport
 import hljs from "highlight.js";
 import "highlight.js/styles/base16/dracula.css";
+import { Sidebar } from "@/components/sidebar/sidebar";
 
 export async function generateStaticParams() {
     const { contents } = await getList();
@@ -33,14 +34,20 @@ export default async function StaticDetailPage({ params: { postId } }: { params:
 
     const date = new Date(`${post.updatedAt}`).toISOString().split("T")[0];
     return (
-        <div className={"mx-auto w-full px-5 xs:px-7 sm:px-10 max-w-screen-lg flex min-h-screen flex-col"}>
+        <>
             <Header />
-            <div className={"mt-5"}>
-                <h1 className={s.h1}>{post.title}</h1>
-                <time className={`${s.date}`}>更新：{date}</time>
-                {/* <div className={s.content}>{parse(post.content)}</div> */}
-                <div className={s.content} dangerouslySetInnerHTML={{ __html: post.content }}></div>
+            <div className={s.content_wrapper}>
+                <div className={s.article_wrapper}>
+                    <div className={s.title_area}>
+                        <h1 className={s.h1}>{post.title}</h1>
+                        <time className={`${s.date}`}>更新日：{date}</time>
+                    </div>
+                    <div className={s.article_area}>
+                        <div className={s.article} dangerouslySetInnerHTML={{ __html: post.content }}></div>
+                    </div>
+                </div>
+                <Sidebar />
             </div>
-        </div>
+        </>
     );
 }

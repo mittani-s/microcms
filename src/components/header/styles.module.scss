@@ -3,13 +3,14 @@
 
 .header {
     border-bottom: solid 3px color.$BLUE;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
     padding: 0 calc(50vw - 50%);
     width: 100vw;
 }
 .wrapper {
-    width: 100%;
+    max-width: 1120px;
+    width: 96%;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     justify-content: space-between;
 }
@@ -22,7 +23,7 @@
 }
 
 .logo {
-    color: #fff;
+    color: color.$BLACK;
     font-size: 36px;
     text-align: center;
     line-height: 1.5;

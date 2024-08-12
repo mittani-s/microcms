@@ -24,6 +24,21 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-    background-color: #14161e;
-    color: #f3f9ff;
+    /* background-color: #14161e; */
+    background-color: #fcfcfc;
+    color: #23234b;
+}
+.body {
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif, "Noto Sans Emoji", "Noto Sans", "Noto Sans CJK JP";
+}
+
+.page_content_wrapper {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 1120px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
 }

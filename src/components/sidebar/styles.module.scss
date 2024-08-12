@@ -1,0 +1,40 @@
+@use "@/styles/color" as color;
+
+.sidebar_wrapper {
+    padding: 24px;
+    background-color: #f5f3f1;
+    border-radius: 5px;
+    max-width: 320px;
+}
+.sidebar_header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.sidebar_icon {
+    min-width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.name_area {
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    border-bottom: 1px solid color.$BLUE;
+    margin-bottom: 5px;
+}
+.name {
+    padding: 5px 10px;
+    padding-left: 0;
+    text-align: left;
+    width: 100%;
+}
+.name_sub {
+    font-size: 11px;
+    font-weight: nomal;
+}
+.sidebar_textarea {
+    font-size: 13px;
+    line-height: 1.5;
+}
