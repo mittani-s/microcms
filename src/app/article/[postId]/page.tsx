@@ -32,7 +32,7 @@ export default async function StaticDetailPage({ params: { postId } }: { params:
     });
     post.content = $.html();
 
-    const date = new Date(`${post.updatedAt}`).toISOString().split("T")[0];
+    const date = new Date(post.updatedAt).toISOString().split("T")[0];
     return (
         <>
             <Header />
@@ -40,7 +40,7 @@ export default async function StaticDetailPage({ params: { postId } }: { params:
                 <div className={s.article_wrapper}>
                     <div className={s.title_area}>
                         <h1 className={s.h1}>{post.title}</h1>
-                        <time className={`${s.date}`}>更新日：{date}</time>
+                        <time className={s.date}>更新日：{date}</time>
                     </div>
                     <div className={s.article_area}>
                         <div className={s.article} dangerouslySetInnerHTML={{ __html: post.content }}></div>
