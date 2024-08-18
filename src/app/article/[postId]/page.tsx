@@ -4,7 +4,7 @@ import { getDetail, getList } from "../../../../libs/microcms";
 import Header from "@/components/header/header";
 import s from "./styles.module.scss";
 import { load } from "cheerio"; // cheerioの直接参照は非推奨だったため、loadをimport
-import hljs from "highlight.js";
+import hljs from "highlight.js/lib/core";
 import "highlight.js/styles/base16/dracula.css";
 import { Sidebar } from "@/components/sidebar/sidebar";
 
@@ -18,15 +18,16 @@ export async function generateStaticParams() {
     return [...paths];
 }
 
+hljs.registerLanguage("typescript", require("highlight.js/lib/languages/typescript"));
+
 export default async function StaticDetailPage({ params: { postId } }: { params: { postId: string } }) {
     const post = await getDetail(postId);
     if (!post) {
         notFound();
     }
-    console.log();
     const $ = load(post.content);
     $("pre code").each((_, elm) => {
-        const result = hljs.highlightAuto($(elm).text());
+        const result = hljs.highlight($(elm).text(), { language: "typescript" });
         $(elm).html(result.value);
         $(elm).addClass("hljs");
     });
