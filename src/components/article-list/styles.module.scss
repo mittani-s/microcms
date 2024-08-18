@@ -13,6 +13,9 @@
     padding: 24px;
     display: block;
     box-sizing: border-box;
+    @include mq.sp {
+        padding: 12px 8px;
+    }
 }
 .imgWrapper {
     max-width: 100%;

@@ -43,3 +43,9 @@ body {
     margin-left: auto;
     align-items: flex-start;
 }
+@media (max-width: 768px) {
+    .page_content_wrapper {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+}
