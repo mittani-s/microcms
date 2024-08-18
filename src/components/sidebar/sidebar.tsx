@@ -13,7 +13,13 @@ export const Sidebar = memo(function HTML() {
                     <div className={s.name_sub}>Web系エンジニア</div>
                 </div>
             </div>
-            <div className={s.sidebar_textarea}>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</div>
+            <div className={s.sidebar_textarea}>
+                新卒で電機メーカーのソフトウェアエンジニアとして就職。
+                <br />
+                その後にWeb制作のフリーランスとして個人で活動。
+                <br />
+                現在は自社アパレルEC会社のフルスタックエンジニアとしてWeb開発に従事
+            </div>
         </div>
     );
 });

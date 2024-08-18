@@ -1,16 +1,26 @@
 @use "@/styles/color" as color;
+@use "@/styles/mixin" as mq;
 
 .sidebar_wrapper {
     padding: 24px;
     background-color: #f5f3f1;
     border-radius: 5px;
     max-width: 320px;
+    @include mq.sp {
+        max-width: 100%;
+        padding: 10px 0px;
+    }
 }
 .sidebar_header {
     display: flex;
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
+    @include mq.sp {
+        max-width: 96%;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 .sidebar_icon {
     min-width: 70px;
@@ -36,5 +46,11 @@
 }
 .sidebar_textarea {
     font-size: 13px;
-    line-height: 1.5;
+    line-height: 2;
+    @include mq.sp {
+        font-size: 13px;
+        max-width: 96%;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }

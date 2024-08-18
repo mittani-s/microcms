@@ -6,7 +6,7 @@ import s from "./styles.module.scss";
 
 const Header = memo(function HTML() {
     return (
-        <header className={`${s.header}`}>
+        <header className={s.header}>
             <div className={s.wrapper}>
                 <HeaderLeft />
                 {/* <HeaderRight /> */}
