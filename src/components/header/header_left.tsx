@@ -20,6 +20,7 @@ const HeaderLeft = memo(function HTML() {
         <div className={s.headerLeft}>
             <Head>
                 <style>@import url({"https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap"});</style>
+                <title>mittaniblog</title>
             </Head>
             <h1 className={`${raleway.className} ${s.logo}`}>
                 <Link href={TOP_URL}>mittaniblog</Link>
